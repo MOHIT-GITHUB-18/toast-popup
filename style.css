@@ -1,0 +1,133 @@
+@font-face {
+    font-family: pop;
+    src: url(fonts/Poppins-Light.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: pop;
+    user-select: none;
+}
+html,body{
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+input[type = "text"], button, select{
+    font: inherit;
+    padding: 5px;
+    text-transform: capitalize;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-inline: auto;
+    gap: 10px;
+}
+input ,button{
+    cursor: pointer;
+}
+#Duration-container{
+    display: flex;
+    align-items: center;
+}
+#Duration{
+    flex-grow: 1;
+}
+.toast{
+    height: 25px;
+    /* width: 200px; */
+    top: 1rem;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: lime;
+    box-shadow: 2px 2px 10px #0044023f;
+    animation: fromleft 0.2s;
+}
+.toast-container.right .toast{
+    animation: fromright 0.2s;
+}
+.toast.go-left{
+    animation: toleft 0.2s forwards;
+}
+.toast-container.right .toast.go-right{
+    animation: toright 0.2s forwards;
+}
+@keyframes fromleft {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes toleft {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes fromright {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes toright {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);    
+    }
+}
+.toast.success::before{
+    content: '✔';
+}
+.toast.erorr::before{
+    content: '✖';
+}
+.toast.warning::before{
+    content: '⚠';
+}
+.toast.info::before{
+    content: 'ℹ';
+}
+.toast.success{
+    background-color: lime;
+}
+.toast.erorr{
+    background-color: red;
+}
+.toast.warning{
+    background-color: orange;
+}
+.toast.info{
+    background-color: #e4e47e;
+}
+.toast-container{
+    position: absolute;
+    top: 1rem;
+    display: flex;
+    flex-direction: column;
+    left: 1rem;
+    gap: 10px;
+}
+.toast-container.right{
+    left: auto;
+    right: 1rem;
+}
+.toast-container.bottom{
+    top: auto;
+    bottom: 1rem;
+}
+.toast span{
+    cursor: pointer;
+}

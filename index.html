@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast popup</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <h1>Text Popup</h1>
+    <div class="container">
+        <select id="horizontal-position">
+            <option value="left">left</option>
+            <option value="right">right</option>
+        </select>
+        <select id="vertical-position">
+            <option value="top">top</option>
+            <option value="bottom">bottom</option>
+        </select>
+        <select id="toast-type">
+            <option value="success">success</option>
+            <option value="erorr">erorr</option>
+            <option value="warning">warning</option>
+            <option value="info">info</option>
+        </select>
+        <input id="toast-message" type="text" value="write your toast here!!!">
+        <div id="Duration-container" >
+            <label for="Duration">Duration
+            </label>
+            <input id="Duration" type="range" min="2" max="10" value="4"> 
+        </div>
+        <button class="showToast" >show toast</button>
+    </div>
+    <div class="toast-container">
+        <!-- <div id="toast">❎ this is a toast message ×</div>
+        <div id="toast">✅ this is a toast message ×</div>
+        <div id="toast">⚠ this is a toast message ×</div>
+        <div id="toast">ℹ this is a toast message ×</div> -->
+    </div>  
+    <script src="script.js"> </script>
+</body>
+</html>
+<!-- <i class="ri-close-line"></i> -->
