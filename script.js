@@ -51,5 +51,3 @@ showToast.addEventListener("click", () => {
 
     toastContainer.append(newToast) 
 })
-
-//video 48:30  toast popup procoderr
